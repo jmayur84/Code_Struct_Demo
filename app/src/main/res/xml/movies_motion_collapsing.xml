@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@+id/collapsed"
+        app:constraintSetStart="@+id/expanded">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@+id/rvMovieList"
+            app:touchAnchorSide="bottom" />
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/expanded">
+
+        <Constraint
+            android:id="@+id/vpCarousal"
+            android:layout_width="@dimen/carousal_wDimen"
+            android:layout_height="@dimen/carousal_hDimen"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/padding_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                app:attributeName="imageAlpha"
+                app:customIntegerValue="255" />
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/lyPageIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vpCarousal">
+            <CustomAttribute
+                app:attributeName="imageAlpha"
+                app:customIntegerValue="255" />
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/cvSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_10dp"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:layout_marginEnd="@dimen/padding_10dp"
+            android:visibility="visible"
+            app:cardCornerRadius="@dimen/padding_15dp"
+            app:cardElevation="@dimen/padding_3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyPageIndicator" />
+
+        <Constraint
+            android:id="@+id/svMovieList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_10dp"
+            android:paddingEnd="@dimen/padding_10dp"
+            android:visibility="visible"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@null"
+            app:queryHint="@string/txtMovie" />
+
+        <Constraint
+            android:id="@+id/rvMovieList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:paddingBottom="@dimen/padding_xxxlarge"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvSearch">
+
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/collapsed">
+
+        <Constraint
+            android:id="@+id/vpCarousal"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/zero_dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                app:attributeName="imageAlpha"
+                app:customIntegerValue="0" />
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/lyPageIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vpCarousal">
+            <CustomAttribute
+                app:attributeName="imageAlpha"
+                app:customIntegerValue="0" />
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/cvSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_10dp"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:layout_marginEnd="@dimen/padding_10dp"
+            android:visibility="visible"
+            app:cardCornerRadius="@dimen/padding_15dp"
+            app:cardElevation="@dimen/padding_3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/svMovieList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_10dp"
+            android:paddingEnd="@dimen/padding_10dp"
+            android:visibility="visible"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@null"
+            app:queryHint="@string/txtMovie" />
+
+        <Constraint
+            android:id="@+id/rvMovieList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:paddingBottom="@dimen/padding_xxxlarge"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvSearch">
+
+        </Constraint>
+
+
+    </ConstraintSet>
+
+</MotionScene>

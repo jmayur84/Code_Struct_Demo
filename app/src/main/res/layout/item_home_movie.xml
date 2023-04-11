@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginStart="@dimen/padding_5dp"
+        android:layout_marginEnd="@dimen/padding_5dp"
+        android:background="@color/black_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/padding_5dp"
+        app:cardElevation="@dimen/padding_5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:padding="@dimen/padding_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/imgMovie"
+                android:layout_width="@dimen/imgDimen"
+                android:layout_height="@dimen/imgDimen"
+                tools:src="@drawable/action"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMovieName"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_3dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgMovie"
+                app:layout_constraintTop_toTopOf="@+id/imgMovie"
+                tools:text="DEMO TEXT" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMovieDesc"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:padding="@dimen/padding_3dp"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/textSize_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgMovie"
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieName"
+                tools:text="DEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXT" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

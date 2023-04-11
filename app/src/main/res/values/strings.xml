@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SearchMovieApp</string>
+    <string name="txtMovie">Search Movie By Name</string>
+</resources>
